@@ -398,7 +398,6 @@ header a{
 }
         
 .gallery {
-    backgrmound: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('../images/works/gallery-bg.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     padding: 7rem 0;
@@ -781,13 +780,7 @@ footer {
     }
 }
 
-@median (max-width: 840px) {
-    .about-image{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-}
+
 
 @media (max-width: 1119px) {
     .hero-right h1{
@@ -803,7 +796,6 @@ footer {
     }
     .about .imagze001{
         max-width:  600px;
-        margbin: 0 auto;
     }
 }
 
@@ -840,15 +832,5 @@ footer {
 @media (max-width: 1110px) {
     .image001{
         max-width: 350px;
-    }
-}
-
-@media (max-width: 1000px) {
-    .ima{
-        flex-direcntion: column;
-
-    }
-    .image001{
-        max-wnidth: 350px;
     }
 }
