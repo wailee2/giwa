@@ -17,10 +17,10 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#gallery" >Gallery</a></li>
                 </ul>
+                <a href="#contact">Contact</a>
             </nav>
-            <a href="#gallery" class="m">Gallery</a>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
@@ -48,35 +48,30 @@
 
     <section class="about" id="about">
         <div class="container">
+            <h2 class="about-h">About Us</h2>
             <div class="ima">
-                <h2 class="about-h">About Us</h2>
-                <img src="images/hero-01.jpg" alt="">
-            </div>
-            <div class="about-container">
-                <div class="about-text">
-                    
-                    <div class="abnout-text-right">
-                        <p>
-                            At Giwa Stitches, we believe that clothing should not just fit well, but should also reflect your personality and lifestyle. That's why we take the time to understand your needs and preferences before crafting your perfect garment.
-                        </p>
-                        <a href="#servinces">contact us</a>
-                        
-                    </div>
+                <div class="image001">
+                    <img src="images/about03.jpg" alt="Tailor at work">
                 </div>
-                <div class="about-image">
-                    <div class="image">
-                        <img src="images/about02.jpg" alt="Tailor at work">
+                <div class="about-container">
+                    <div class="about-text">
+                        <div class="about-text-right">
+                            <p>
+                                At Giwa Stitches, we believe that clothing should not just fit well, but should also reflect your personality and lifestyle. That's why we take the time to understand your needs and preferences before crafting your perfect garment.
+                            </p>
+                        </div>
                     </div>
-                    <div class="image">
-                        <img src="images/about02.jpg" alt="Tailor at work">
-                    </div>
-                    <div>
-                        <span>/ APPROACH</span>
-                        <p>Every piece is handcrafted with attention to detail, ensuring you look sharp and fool confident.</p>
+                    <div class="about-image">
+                        <div class="image">
+                            <img src="images/about02.jpg" alt="Tailor at work">
+                        </div>
+                        <div>
+                            <span>/ APPROACH</span>
+                            <p>Every piece is handcrafted with attention to detail, ensuring you look sharp and fool confident.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            
         </div>
     </section>
  
@@ -158,26 +153,19 @@
         <div class="container">
             <h2>Book an appointment</h2>
             <a href="#">Get in touch</a>
-            <!--
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Tailor Street, Fashion District, NY 10001</p>
-                    <p><i class="fas fa-phone"></i> (212) 555-1234</p>
-                    <p><i class="fas fa-envelope"></i> info@elegantstitch.com</p>
-                    <p><i class="fas fa-clock"></i> Monday - Friday: 9am - 6pm<br>Saturday: 10am - 4pm<br>Sunday: Closed</p>
-                </div>
-                
-            </div>-->
         </div>
     </section>
 
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Elegant Stitch</h3>
-                    <p>Precision tailoring for the modern gentleman. Crafting exceptional garments since 1985.</p>
+                <div>
+                    <div class="footer-desc">
+                        <h3>Giwa Stitches</h3>
+                        <p>
+                            Precision tailoring for the modern gentleman. Crafting exceptional garments since 1985.
+                        </p>
+                    </div>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -186,31 +174,14 @@
                     </div>
                 </div>
                 <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#testimonial">Testimonials</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="#">Bespoke Suits</a></li>
-                        <li><a href="#">Shirt Making</a></li>
-                        <li><a href="#">Alterations</a></li>
-                        <li><a href="#">Wedding Attire</a></li>
-                        <li><a href="#">Corporate Wear</a></li>
-                        <li><a href="#">Personal Styling</a></li>
-                    </ul>
+                    <div class="copyright">
+                        <p>&copy; 2025 Giwa Stitches. All Rights Reserved.</p>
+                    </div>
+                    <div class="wailee">Made with heart - <a href="#">Wailee</a>
+                    </div>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2023 Elegant Stitch. All Rights Reserved.</p>
-            </div>
+            <div class="giwa">GIWA</div>
         </div>
     </footer>
 
@@ -266,13 +237,11 @@
         }, observerOptions);
         
         // Observe elements that need animation
-        const aboutText = document.querySelector('.about-text');
         const aboutImage = document.querySelector('.about-image');
         const serviceCards = document.querySelectorAll('.service-card');
         const galleryContainer = document.querySelector('.gallery-container');
         const testimonialContainer = document.querySelector('.testimonial-container');
         
-        observer.observe(aboutText);
         observer.observe(aboutImage);
         serviceCards.forEach(card => observer.observe(card));
         observer.observe(galleryContainer);
@@ -401,17 +370,7 @@
                 }
             }
             
-            // Gallery section parallax
-            const gallery = document.querySelector('.gallery');
-            if (gallery) {
-                const galleryOffset = gallery.offsetTop;
-                const galleryHeight = gallery.offsetHeight;
-                const galleryScroll = scrollPosition - galleryOffset;
-                
-                if (scrollPosition > galleryOffset - window.innerHeight && scrollPosition < galleryOffset + galleryHeight) {
-                    gallery.style.backgroundPositionY = galleryScroll * 0.3 + 'px';
-                }
-            }
+            
         });
     </script>
 </body>
